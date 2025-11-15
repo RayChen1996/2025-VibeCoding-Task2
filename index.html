@@ -57,7 +57,6 @@
         color: var(--color-text-main);
         line-height: 1.6;
         -webkit-font-smoothing: antialiased;
-        overflow-x: hidden;
       }
 
       .page {
@@ -287,6 +286,10 @@
         display: block;
         border-radius: var(--radius-lg);
         box-shadow: var(--shadow-soft);
+      }
+
+      a {
+        word-break: break-word;
       }
 
       .pill-note {
@@ -521,9 +524,10 @@
         max-width: 420px;
       }
 
+      /* 縮小裝飾圈，完全包在圖片內，避免超出螢幕 */
       .hero-image-ring {
         position: absolute;
-        inset: -8%;
+        inset: 6%;
         border-radius: var(--radius-lg);
         border: 1px solid rgba(56, 189, 248, 0.4);
         opacity: 0.85;
@@ -532,7 +536,7 @@
 
       .hero-image-orbit {
         position: absolute;
-        inset: -18%;
+        inset: 0;
         border-radius: var(--radius-pill);
         border: 1px dashed rgba(56, 189, 248, 0.35);
         transform: rotate(-8deg);
@@ -831,7 +835,7 @@
           <div class="nav" role="navigation" aria-label="主要導覽">
             <div class="nav-brand">
               <span class="nav-brand-badge">Frontend Dev</span>
-              <span>Ray Chen</span>
+              <span>Ray Chen · 個人開發者空間</span>
             </div>
 
             <!-- 手機版漢堡選單切換（純 CSS checkbox hack） -->
